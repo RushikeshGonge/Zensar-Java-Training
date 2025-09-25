@@ -49,8 +49,9 @@ public class Driver {
 			System.out.println("4. Set Candy Price");
 			System.out.println("5. Set Cookie Price");
 			System.out.println("6. Set Ice Cream Price");
-			System.out.println("7. View Storage");
-			System.out.println("8. Back");
+			System.out.println("7. Set tax");
+			System.out.println("8. View Storage");
+			System.out.println("9. Back");
 			System.out.println("Enter your choice: ");
 			int choice = sc.nextInt();
 			
@@ -87,9 +88,14 @@ public class Driver {
 				s.setIceCreamPrice(price);
 				break;
 			case 7:
-				s.viewStorage();
+				System.out.println("Enter new tax");
+				double newTax = sc.nextDouble();
+				Shop.setTax(newTax);
 				break;
 			case 8:
+				s.viewStorage();
+				break;
+			case 9:
 				return;
 			default:
 				System.out.println("Invalid Choice");

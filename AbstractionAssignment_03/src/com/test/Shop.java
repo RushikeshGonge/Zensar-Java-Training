@@ -35,19 +35,20 @@ public class Shop {
 	
 	public void setCandyPrice(double price)
 	{
-		candy.setPricePerUnit(price);
+		Candy.setPricePerUnit(price);
 		System.out.println("Candy price updated!!");
+		System.out.println("Updated price => " + Candy.getPricePerUnit());
 	}
 	
 	public void setCookiePrice(double price)
 	{
-		cookie.setPricePerUnit(price);
+		Cookie.setPricePerUnit(price);
 		System.out.println("Cookie price updated!!");
 	}
 	
 	public void setIceCreamPrice(double price)
 	{
-		iceCream.setPricePerUnit(price);
+		IceCream.setPricePerUnit(price);
 		System.out.println("IceCream price updated!!");
 	}
 	
@@ -57,6 +58,12 @@ public class Shop {
 		System.out.println("Candy : " + candy.getQuantity());
 		System.out.println("Cookie : " + cookie.getQuantity());
 		System.out.println("IceCream : " + iceCream.getQuantity());
+	}
+	
+	public static void setTax(double tax)
+	{
+		Candy.setTax(tax);
+		System.out.println("Tax updated successfully!!!");
 	}
 	
 	

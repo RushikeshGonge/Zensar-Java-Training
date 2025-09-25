@@ -1,7 +1,7 @@
 package com.test;
 
 public class IceCream extends DessertItem{
-	private double pricePerUnit;
+	private static double pricePerUnit;
 	
 	public IceCream() {
 		// TODO Auto-generated constructor stub
@@ -10,15 +10,15 @@ public class IceCream extends DessertItem{
 	public IceCream(int quantity, double pricePerUnit)
 	{
 		super(quantity);
-		this.pricePerUnit = pricePerUnit;
+		IceCream.pricePerUnit = pricePerUnit;
 	}
 	
-	public double getPricePerUnit() {
+	public static double getPricePerUnit() {
 		return pricePerUnit;
 	}
 
-	public void setPricePerUnit(double pricePerUnit) {
-		this.pricePerUnit = pricePerUnit;
+	public static void setPricePerUnit(double pricePerUnit) {
+		IceCream.pricePerUnit = pricePerUnit;
 	}
 
 	@Override

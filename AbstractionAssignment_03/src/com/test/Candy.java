@@ -1,7 +1,7 @@
 package com.test;
 
 public class Candy extends DessertItem{
-	private double pricePerUnit;
+	private static double pricePerUnit;
 	
 	public Candy() {
 		// TODO Auto-generated constructor stub
@@ -10,7 +10,7 @@ public class Candy extends DessertItem{
 	public Candy(int quantity, double pricePerUnit)
 	{
 		super(quantity);
-		this.pricePerUnit = pricePerUnit;
+		Candy.pricePerUnit = pricePerUnit;
 	}
 	
 
@@ -22,12 +22,12 @@ public class Candy extends DessertItem{
 		return cost + (cost * (super.getTax()/100));
 	}
 
-	public double getPricePerUnit() {
+	public static double getPricePerUnit() {
 		return pricePerUnit;
 	}
 
-	public void setPricePerUnit(double pricePerUnit) {
-		this.pricePerUnit = pricePerUnit;
+	public static void setPricePerUnit(double pricePerUnit) {
+		Candy.pricePerUnit = pricePerUnit;
 	}
 	
 	

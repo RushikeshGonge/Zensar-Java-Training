@@ -1,7 +1,7 @@
 package com.test;
 
 public class Cookie extends DessertItem{
-	private double pricePerUnit; //in euros
+	private static double pricePerUnit; //in euros
 	
 	public Cookie() {
 		// TODO Auto-generated constructor stub
@@ -10,15 +10,15 @@ public class Cookie extends DessertItem{
 	public Cookie(int quantity, double pricePerUnit)
 	{
 		super(quantity);
-		this.pricePerUnit = pricePerUnit;
+		Cookie.pricePerUnit = pricePerUnit;
 	}
 	
-	public double getPricePerUnit() {
+	public static double getPricePerUnit() {
 		return pricePerUnit;
 	}
 
-	public void setPricePerUnit(double pricePerUnit) {
-		this.pricePerUnit = pricePerUnit;
+	public static void setPricePerUnit(double pricePerUnit) {
+		Cookie.pricePerUnit = pricePerUnit;
 	}
 
 	@Override

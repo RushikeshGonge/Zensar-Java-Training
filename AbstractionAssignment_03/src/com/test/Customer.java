@@ -51,17 +51,17 @@ public class Customer extends Shop{
 	
 	public void candyPrice()
 	{
-		System.out.println("Candy price: " + candy.getPricePerUnit());
+		System.out.println("Candy price: " + Candy.getPricePerUnit());
 	}
 	
 	public void cookiePrice()
 	{
-		System.out.println("Cookie price: " + cookie.getPricePerUnit());
+		System.out.println("Cookie price: " + Cookie.getPricePerUnit());
 	}
 	
 	public void iceCreamPrice()
 	{
-		System.out.println("IceCream price: " + iceCream.getPricePerUnit());
+		System.out.println("IceCream price: " + IceCream.getPricePerUnit());
 	}
 	
 	public void viewBoughtItems()
@@ -75,14 +75,14 @@ public class Customer extends Shop{
 	
 	public void showTax()
 	{
-		System.out.println("Current Tax : " + candy.getTax());
+		System.out.println("Current Tax : " + Candy.getTax());
 	}
 	
 	public void showBill()
 	{
 		System.out.println("**************BILL*************");
 		System.out.println("Items     "+"Units     "+"PricePerUnit(in rupees)     "+"Total");
-		System.out.println("1.Candy     "+candyCount+"             "+(candy.getPricePerUnit()*60)+"                   "+candy.getCost(candyCount));
+		System.out.println("1.Candy     "+candyCount+"             "+(Candy.getPricePerUnit()*60)+"                   "+candy.getCost(candyCount));
 		System.out.println("2.Cookies   "+cookieCount+"             "+(cookie.getPricePerUnit()*70)+"                   "+cookie.getCost(cookieCount));
 		System.out.println("3.IceCreams "+iceCreamCount+"             "+iceCream.getPricePerUnit()+"                   "+iceCream.getCost(iceCreamCount));
 		System.out.println("Total cost(tax included): " + (candy.getCost(candyCount) + cookie.getCost(cookieCount) + iceCream.getCost(iceCreamCount)));
