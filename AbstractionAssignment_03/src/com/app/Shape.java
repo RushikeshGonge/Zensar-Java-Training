@@ -1,0 +1,6 @@
+package com.app;
+
+public abstract class Shape {
+	public abstract void draw();
+
+}
